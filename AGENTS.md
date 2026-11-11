@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## App media
+- Import uploaded media through Lovable Assets JSON pointers and use their URL fields; this keeps original binaries out of the repository.
