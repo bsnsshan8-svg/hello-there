@@ -115,7 +115,35 @@ function HomePage() {
           <form className="inquiry-form" onSubmit={submitInquiry}><div className="form-kicker">START A CONVERSATION</div><h3>Request an inspection or quote</h3><label htmlFor="name">Your name</label><input id="name" autoComplete="name" required value={form.name} onChange={(e)=>setForm({...form,name:e.target.value})} placeholder="Full name" /><label htmlFor="phone">Phone number</label><input id="phone" type="tel" inputMode="tel" autoComplete="tel" required value={form.phone} onChange={(e)=>setForm({...form,phone:e.target.value})} placeholder="03xx-xxxxxxx" /><div className="form-row"><div><label htmlFor="city">City</label><select id="city" value={form.city} onChange={(e)=>setForm({...form,city:e.target.value})}><option>Lahore</option><option>Islamabad</option><option>Other</option></select></div><div><label htmlFor="service">Service</label><select id="service" value={form.service} onChange={(e)=>setForm({...form,service:e.target.value})}><option>Free bathroom seepage inspection</option><option>Tiles & marble work</option><option>House construction</option><option>Waterproofing</option><option>Renovation & finishing</option><option>Plastering & flooring</option><option>Other</option></select></div></div><label htmlFor="details">Project details</label><textarea id="details" rows={3} value={form.details} onChange={(e)=>setForm({...form,details:e.target.value})} placeholder="Briefly describe your project or issue..." /><button className="button button-green form-submit" type="submit">Send inquiry on WhatsApp <ArrowRight size={17} /></button><small>Submitting opens WhatsApp with your details. This website does not store form submissions.</small></form>
         </div></section>
       </main>
-      <footer className="site-footer"><div className="site-container footer-inner"><a className="brand brand-footer" href="#home"><span className="brand-mark"><Home size={23} /></span><span className="brand-name">M. RASHEED<small>CONSTRUCTION</small></span></a><p>Quality You Can Build On.</p><span>© {new Date().getFullYear()} M. Rasheed Construction</span></div></footer>
+      <footer className="site-footer">
+        <div className="site-container footer-main">
+          <div className="footer-brand-column">
+            <a className="brand brand-footer" href="#home" aria-label="M. Rasheed Construction home"><span className="brand-mark"><Home size={23} /></span><span className="brand-name">M. RASHEED<small>CONSTRUCTION</small></span></a>
+            <p className="footer-tagline">Quality You Can Build On.</p>
+            <p className="footer-description">Experienced construction, specialist tile and marble work, bathroom seepage solutions and careful finishing across Lahore and Islamabad.</p>
+            <a className="footer-cta" href="#inspection">Book a free initial inspection <ArrowRight size={15} /></a>
+          </div>
+          <div className="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Our Services</a><a href="#process">Our Process</a><a href="#contact">Contact Us</a>
+          </div>
+          <div className="footer-column">
+            <h3>Our Services</h3>
+            <a href="#services">Tiles & Marble Work</a><a href="#inspection">Bathroom Seepage Solutions</a><a href="#services">House Construction</a><a href="#services">Bathroom & Kitchen Renovation</a><a href="#services">Plastering & Wall Finishing</a><a href="#services">Flooring & Waterproofing</a>
+          </div>
+          <div className="footer-column footer-contact">
+            <h3>Get in Touch</h3>
+            <div><Phone size={16} /><span><small>CALL US</small><a href="tel:+923071033792">0307-1033792</a></span></div>
+            <div><MessageCircle size={16} /><span><small>WHATSAPP</small><a href={waLink()} target="_blank" rel="noopener noreferrer">0347-4033792</a></span></div>
+            <div><MapPin size={16} /><span><small>SERVICE AREAS</small><b>Lahore & Islamabad</b></span></div>
+            <div><Sparkles size={16} /><span><small>EMAIL</small><a href={`mailto:${EMAIL}`}>{EMAIL}</a></span></div>
+          </div>
+        </div>
+        <div className="site-container footer-bottom">
+          <span>© {new Date().getFullYear()} M. Rasheed Construction. All rights reserved.</span>
+          <span>Built on experience. Focused on quality.</span>
+        </div>
+      </footer>
       <a className="floating-whatsapp" href={waLink()} target="_blank" rel="noopener noreferrer" aria-label="Chat with M. Rasheed Construction on WhatsApp"><MessageCircle size={20} /><span>WhatsApp Us</span></a>
     </div>
   );
