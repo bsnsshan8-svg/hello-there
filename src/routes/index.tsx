@@ -7,6 +7,7 @@ import constructionPhoto from "@/assets/house-construction.png.asset.json";
 import inspectionPhoto from "@/assets/bathroom-inspection.png.asset.json";
 import marblePhoto from "@/assets/marble-installation.png.asset.json";
 import aboutPhoto from "@/assets/about-portrait.jpg.asset.json";
+import heroPhoto from "@/assets/construction-skylines.png.asset.json";
 
 import {
   ArrowRight, Check, ChevronDown, Clock3, Droplets, Hammer, Home,
@@ -81,7 +82,7 @@ function HomePage() {
 
       <main>
         <section className="hero" id="home">
-          <div className="hero-photo"><img src={marblePhoto.url} alt="M. Rasheed Construction worker installing marble flooring" fetchPriority="high" /></div>
+          <div className="hero-photo"><img src={heroPhoto.url} alt="Construction worker plastering a wall with Islamabad and Lahore landmarks behind him" fetchPriority="high" /></div>
           <div className="hero-shade" />
           <div className="site-container hero-content">
             <div className="eyebrow"><span /> 10+ YEARS OF CONSTRUCTION EXPERIENCE</div>
