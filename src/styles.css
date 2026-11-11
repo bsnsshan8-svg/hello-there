@@ -156,7 +156,6 @@
 
 
 /* M. Rasheed Construction brand system */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
 :root{--mr-green:#123d31;--mr-green-deep:#0d3027;--mr-gold:#c5a15b;--mr-cream:#f7f5ef;--mr-ink:#172a23;--mr-muted:#68766f}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{font-family:'DM Sans',Arial,sans-serif;color:var(--mr-ink);background:#fff}
