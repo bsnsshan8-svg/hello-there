@@ -8,6 +8,7 @@ import inspectionPhoto from "@/assets/bathroom-inspection.png.asset.json";
 import marblePhoto from "@/assets/marble-installation.png.asset.json";
 import aboutPhoto from "@/assets/about-portrait.jpg.asset.json";
 import heroPhoto from "@/assets/construction-skylines.png.asset.json";
+import logo from "@/assets/construction-logo.png.asset.json";
 
 import {
   ArrowRight, Check, ChevronDown, Clock3, Droplets, Hammer, Home,
@@ -69,8 +70,7 @@ function HomePage() {
       <header className="site-header">
         <div className="site-container nav-inner">
           <a href="#home" className="brand" aria-label="M. Rasheed Construction home">
-            <span className="brand-mark"><Home size={25} strokeWidth={1.7} /></span>
-            <span className="brand-name">M. RASHEED<small>CONSTRUCTION</small></span>
+            <img className="brand-logo" src={logo.url} alt="M. Rasheed Construction" />
           </a>
           <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">{menuOpen ? <X /> : <Menu />}</button>
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"}>
@@ -115,7 +115,7 @@ function HomePage() {
           <form className="inquiry-form" onSubmit={submitInquiry}><div className="form-kicker">START A CONVERSATION</div><h3>Request an inspection or quote</h3><label htmlFor="name">Your name</label><input id="name" required value={form.name} onChange={(e)=>setForm({...form,name:e.target.value})} placeholder="Full name" /><label htmlFor="phone">Phone number</label><input id="phone" required value={form.phone} onChange={(e)=>setForm({...form,phone:e.target.value})} placeholder="03xx-xxxxxxx" /><div className="form-row"><div><label htmlFor="city">City</label><select id="city" value={form.city} onChange={(e)=>setForm({...form,city:e.target.value})}><option>Lahore</option><option>Islamabad</option><option>Other</option></select></div><div><label htmlFor="service">Service</label><select id="service" value={form.service} onChange={(e)=>setForm({...form,service:e.target.value})}><option>Free bathroom seepage inspection</option><option>Tiles & marble work</option><option>House construction</option><option>Waterproofing</option><option>Renovation & finishing</option><option>Plastering & flooring</option><option>Other</option></select></div></div><label htmlFor="details">Project details</label><textarea id="details" rows={3} value={form.details} onChange={(e)=>setForm({...form,details:e.target.value})} placeholder="Briefly describe your project or issue..." /><button className="button button-green form-submit" type="submit">Send inquiry on WhatsApp <ArrowRight size={17} /></button><small>Submitting opens WhatsApp with your details. This website does not store form submissions.</small></form>
         </div></section>
       </main>
-      <footer className="site-footer"><div className="site-container footer-inner"><a className="brand brand-footer" href="#home"><span className="brand-mark"><Home size={23} /></span><span className="brand-name">M. RASHEED<small>CONSTRUCTION</small></span></a><p>Quality You Can Build On.</p><span>© {new Date().getFullYear()} M. Rasheed Construction</span></div></footer>
+      <footer className="site-footer"><div className="site-container footer-inner"><a className="brand brand-footer" href="#home"><img className="brand-logo" src={logo.url} alt="M. Rasheed Construction" /></a><p>Quality You Can Build On.</p><span>© {new Date().getFullYear()} M. Rasheed Construction</span></div></footer>
       <a className="floating-whatsapp" href={waLink()} aria-label="Chat with M. Rasheed Construction on WhatsApp"><MessageCircle size={20} /><span>WhatsApp Us</span></a>
     </div>
   );
